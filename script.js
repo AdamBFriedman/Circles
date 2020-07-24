@@ -19,7 +19,7 @@ class Particle {
 		ctx.beginPath();
 		// Create circle effect
 		ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-		ctx.fillStyle = 'blue';
+		let img = (ctx.fillStyle = 'blue');
 		ctx.fill();
 	}
 
@@ -43,7 +43,9 @@ function init() {
 }
 
 function animate() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	// ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = 'rgba(255,255,255,0.05)';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
 	for (let i = 0; i < particlesArray.length; i++) {
 		particlesArray[i].update();
 	}

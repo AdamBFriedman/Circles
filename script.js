@@ -41,3 +41,13 @@ function init() {
 		particlesArray.push(new Particle());
 	}
 }
+
+function animate() {
+	for (let i = 0; i < particlesArray.length; i++) {
+		particlesArray[i].update();
+	}
+	requestAnimationFrame(animate);
+}
+
+init();
+animate();

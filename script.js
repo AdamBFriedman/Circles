@@ -19,7 +19,7 @@ class Particle {
 		ctx.beginPath();
 		// Create circle effect
 		ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-		let img = (ctx.fillStyle = 'blue');
+		ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
 		ctx.fill();
 	}
 
@@ -49,6 +49,7 @@ function animate() {
 	for (let i = 0; i < particlesArray.length; i++) {
 		particlesArray[i].update();
 	}
+	hue += 0.5;
 	requestAnimationFrame(animate);
 }
 

@@ -22,4 +22,16 @@ class Particle {
 		ctx.fillStyle = 'blue';
 		ctx.fill();
 	}
+
+	update() {
+		this.x += this.speedX;
+		this.y += this.speedY;
+		if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+			this.speexX = -this.speedX;
+		}
+		if (this.y + this.radius > canvas.height || this.y + this.radius < 0) {
+			this.speedY = -this.speedY;
+		}
+		this.draw();
+	}
 }

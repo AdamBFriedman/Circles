@@ -14,4 +14,12 @@ class Particle {
 		this.speedX = Math.random() * 3 - 1.5;
 		this.speedY = Math.random() * 3 - 1.5;
 	}
+
+	draw() {
+		ctx.beginPath();
+		// Create circle effect
+		ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+		ctx.fillStyle = 'blue';
+		ctx.fill();
+	}
 }

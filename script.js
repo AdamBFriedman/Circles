@@ -43,6 +43,7 @@ function init() {
 }
 
 function animate() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	for (let i = 0; i < particlesArray.length; i++) {
 		particlesArray[i].update();
 	}

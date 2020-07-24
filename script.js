@@ -35,3 +35,9 @@ class Particle {
 		this.draw();
 	}
 }
+
+function init() {
+	for (let i = 0; i < numberOfParticles; i++) {
+		particlesArray.push(new Particle());
+	}
+}
